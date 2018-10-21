@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Accounts</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<!-- load dependency scripts -->
+  <script type="text/javascript" src="js/core.min.js"></script>
+  <script src="js/feathers.js"></script>
+  <script src="js/socket.io.js"></script>
+
+	<!-- jQuery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1 style="text-align:center;">Sample feathersjs local user account & authentication.</h1>
+
+		<div id="login" class="row center">
+			<div id="loginform">
+				<table>
+					<tr><th>Username: </th><td><input id="username"></td></tr>
+					<tr><th>Password: </th><td><input id="password" type="password"></td></tr>
+					<tr><td></td><td><button id="login">Log In</button></td></tr>
+				</table>
+			</div>
+		</div>
+
+		<div id="main" class="row hidden">
+			<div class="row center restricted hidden" data-groups="admin">
+				<h3>User Administration</h3>
+				<div class="centered box clearfix">
+					<div id="createuserform" class="left box">
+						<table>
+							<tr><th>Username: </th><td><input id="createusername"></td></tr>
+							<tr><th>Password: </th><td><input id="createpassword"></td></tr>
+							<tr><th>Group: </th><td><select id="creategroup"><option value="player">player</option><option value="admin">admin</option></select></td></tr>
+							<tr><td></td><td><button id="createuser">Create User</button></td></tr>
+						</table>
+					</div>
+
+					<div class="left box">
+						<table id="userlist"></table>
+					</div>
+				</div>
+				<hr>
+			</div>
+
+			<div class="row center">
+				<div id="passwordform" class="centered box">
+					<h3>Change Password</h3>
+					<table>
+						<tr><th>Password: </th><td><input id="changepassword"></td></tr>
+						<tr><td></td><td><button id="patchpassword">Change Password</button></td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div id="errors"></div>
+			<div id="progress"></div>
+			<div id="data"></div>
+		</div>
+	</div>
+</body>
+</html>

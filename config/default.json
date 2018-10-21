@@ -1,0 +1,22 @@
+{
+  "host": "0.0.0.0",
+  "port": 3030,
+  "wwwPath": "../public",
+  "database": {
+    "type": "nedb",
+    "path": "../data/"
+  },
+  "nodeTLSRejectUnauthorized": false,
+  "sslKeyFile": "../certs/self-signed.key",
+  "sslCertificateFile": "../certs/self-signed.crt",
+  "authentication": {
+    "secret": "REPLACE WITH SECRET",
+    "jwt": {
+      "audience": "accounts",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "\\username"
+    }
+  }
+}
