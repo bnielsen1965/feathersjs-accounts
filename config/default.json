@@ -1,5 +1,5 @@
 {
-  "host": "0.0.0.0",
+  "host": "localhost",
   "port": 3030,
   "wwwPath": "../public",
   "database": {
@@ -7,8 +7,8 @@
     "path": "../data/"
   },
   "nodeTLSRejectUnauthorized": false,
-  "sslKeyFile": "../certs/self-signed.key",
-  "sslCertificateFile": "../certs/self-signed.crt",
+  "sslKeyFile": "",
+  "sslCertificateFile": "",
   "authentication": {
     "secret": "REPLACE WITH SECRET",
     "jwt": {
