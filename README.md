@@ -50,3 +50,5 @@ address http://localhost:3030/
 - Add session storage.
 - Implement channels to listen for changes to database.
 - Validate user input.
+- Make data store configurable to simplify implementing other databases.
+- Add throttling to authentication service to prevent brute force attack.

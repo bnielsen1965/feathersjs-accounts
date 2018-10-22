@@ -25,16 +25,4 @@ module.exports = app => {
     }
   }));
   app.configure(Permissions);
-/*
-  const Users = app.service('users');
-
-// TODO place this in an init script that runs optionally??? Or is this needed, use makelocaluser script???
-  // create default application users
-  app.get('localUsers').forEach((user) => {
-    user.hash = user.password;
-    delete user.password; // TODO need to rework the local user init!!!
-    Users.create(user) //patch(null, user, { query: { username: user.username }, nedb: { upsert: true } })
-    .catch(err => { console.log('UERR', err.toString()); });
-  });
-  */
 }
